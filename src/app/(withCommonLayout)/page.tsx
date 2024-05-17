@@ -1,11 +1,8 @@
-import Navbar from "@/components/shared/Navbar/Navbar";
-import { Button } from "@mui/material";
-
+import Carusol from "@/components/Banner/Carusol";
 const Homepage = () => {
   return (
     <div>
-      <h1>home</h1>
-      <Button>click</Button>
+      <Carusol />
     </div>
   );
 };
