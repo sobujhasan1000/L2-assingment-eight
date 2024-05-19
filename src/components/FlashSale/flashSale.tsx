@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Button } from "@mui/material";
 import ProductCard from "../shared/Ui/productCard/ProductCard";
 import { Product } from "./../../types/index";
@@ -11,8 +10,8 @@ const FlashSale = ({ products }: { products: Product[] }) => {
         <Button>See All</Button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 my-6">
-        {products.slice(0, 6).map((product) => (
+      <div className="grid grid-cols-4 gap-4 my-6">
+        {products.slice(0, 4).map((product) => (
           <ProductCard key={product.brand} product={product} />
         ))}
       </div>

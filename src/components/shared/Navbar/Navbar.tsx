@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-cyan-300">
+    <div className="navbar bg-teal-200">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>

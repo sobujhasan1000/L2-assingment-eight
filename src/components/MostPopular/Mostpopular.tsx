@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
 import ProductCard from "../shared/Ui/productCard/ProductCard";
+import { Product } from "@/types";
 
-const Mostpopular = () => {
+const Mostpopular = ({ products }: { products: Product[] }) => {
   return (
     <div className="my-10">
       <div className="flex justify-between my-6">
@@ -17,8 +18,10 @@ const Mostpopular = () => {
           <Button>view All</Button>
         </div>
       </div>
-      <div>
-        <ProductCard />
+      <div className="grid grid-cols-4 gap-4 my-6">
+        {products.slice(0, 8).map((product) => (
+          <ProductCard key={product.brand} product={product} />
+        ))}
       </div>
     </div>
   );

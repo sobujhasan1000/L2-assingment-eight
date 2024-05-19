@@ -5,13 +5,13 @@ import TopCatagoris from "@/components/TopCatagories/TopCatagoris";
 const Homepage = async () => {
   const res = await fetch("http://localhost:5000/products");
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
   return (
     <div>
       <Carusol />
       <FlashSale products={products} />
-      <TopCatagoris />
-      <Mostpopular />
+      <TopCatagoris products={products} />
+      <Mostpopular products={products} />
     </div>
   );
 };
