@@ -11,16 +11,16 @@ const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="categories">Categories</Link>
           </li>
           <li>
-            <Link href="/products">Products</Link>
+            <Link href="products">Products</Link>
           </li>
           <li>
-            <Link href="/flash-sale">Flash sale</Link>
+            <Link href="flash-sale">Flash sale</Link>
           </li>
           <li>
             <Link href="/about">About us</Link>
