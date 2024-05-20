@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
-import ProductCard from "../shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
+import BrandCard from "../shared/Ui/brandCard/BrandCard";
 
 const TopCatagoris = ({ products }: { products: Product[] }) => {
   const topBrans = products.filter((bands) => bands.rating >= 4);
@@ -16,9 +16,9 @@ const TopCatagoris = ({ products }: { products: Product[] }) => {
           maiores asperiores porro quia quos <br />
           corporis explicabo, libero dolores voluptatem minus.
         </p>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-6">
           {topBrans.slice(0, 6).map((product) => (
-            <ProductCard key={product.brand} product={product} />
+            <BrandCard key={product.brand} product={product} />
           ))}
         </div>
       </div>

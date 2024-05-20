@@ -1,3 +1,4 @@
+import AllLaptopCard from "@/components/allLaptopsCard/AllLaptopCard";
 import ProductCard from "@/components/shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
 import { Button, Checkbox } from "@mui/material";
@@ -51,7 +52,7 @@ const Productspage = async () => {
         <div className="col-span-4 bg-zinc-300">
           <div className="grid grid-cols-3 gap-4 my-6">
             {allLaptops.map((product: Product) => (
-              <ProductCard key={product.brand} product={product} />
+              <AllLaptopCard key={product.brand} product={product} />
             ))}
           </div>
         </div>

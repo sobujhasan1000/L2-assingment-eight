@@ -10,4 +10,6 @@ export interface Product {
   discount: number;
   sampleImages: string[];
   flashSale: boolean;
+  likes: number;
+  _id: string;
 }
