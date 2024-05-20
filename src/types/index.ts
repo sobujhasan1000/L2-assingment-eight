@@ -7,5 +7,7 @@ export interface Product {
   rating: number;
   brand: string;
   productTitle: string;
+  discount: number;
   sampleImages: string[];
+  flashSale: boolean;
 }

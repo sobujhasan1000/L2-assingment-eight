@@ -3,6 +3,8 @@ import ProductCard from "../shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
 
 const TopCatagoris = ({ products }: { products: Product[] }) => {
+  const topBrans = products.filter((bands) => bands.rating >= 4);
+  // console.log(topbrans);
   return (
     <div>
       <div className="my-6">
@@ -15,7 +17,7 @@ const TopCatagoris = ({ products }: { products: Product[] }) => {
           corporis explicabo, libero dolores voluptatem minus.
         </p>
         <div className="grid grid-cols-2 gap-2">
-          {products.slice(6, 10).map((product) => (
+          {topBrans.slice(0, 6).map((product) => (
             <ProductCard key={product.brand} product={product} />
           ))}
         </div>
