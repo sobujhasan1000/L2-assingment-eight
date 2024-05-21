@@ -2,12 +2,9 @@ import ProductCard from "@/components/shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
 
 const FlashSalePage = async () => {
-  const res = await fetch(
-    "https://project-test-server-r5ab9c517-sobujhasan1000s-projects.vercel.app/products",
-    {
-      next: { revalidate: 30 },
-    }
-  );
+  const res = await fetch(`${process.env.API_URL}/products`, {
+    next: { revalidate: 30 },
+  });
   const products: Product[] = await res.json();
   const flashSaleProducts = products.filter(
     (product) => product.flashSale === true
