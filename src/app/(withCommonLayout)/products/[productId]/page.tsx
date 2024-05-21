@@ -8,7 +8,7 @@
 
 // const Detailspage = async ({ params }: laptopDetails) => {
 //   console.log(params);
-//   const res = await fetch(`http://localhost:5000/products/${params.productId}`);
+//   const res = await fetch(`https://project-test-server-r5ab9c517-sobujhasan1000s-projects.vercel.app/${params.productId}`);
 //   const laptopDetails = await res.json();
 //   console.log(laptopDetails);
 //   return (
