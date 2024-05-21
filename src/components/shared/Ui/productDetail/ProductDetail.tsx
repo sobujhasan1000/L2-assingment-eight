@@ -6,6 +6,7 @@ const ProductDetail = ({
 }: {
   laptopDetails: Product | undefined;
 }) => {
+  console.log(laptopDetails);
   if (!laptopDetails) {
     return <div>Loading...</div>;
   }
