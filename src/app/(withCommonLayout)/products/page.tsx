@@ -1,10 +1,10 @@
 import AllLaptopCard from "@/components/allLaptopsCard/AllLaptopCard";
-import ProductCard from "@/components/shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
-import { Button, Checkbox } from "@mui/material";
 
 const Productspage = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch(
+    "https://project-test-server-r5ab9c517-sobujhasan1000s-projects.vercel.app/products"
+  );
   const allLaptops = await res.json();
   return (
     <div>
