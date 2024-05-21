@@ -1,14 +1,15 @@
+"use client";
 import { Button } from "@mui/material";
-import ProductCard from "../shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
 import Link from "next/link";
+import TendingCard from "../shared/Ui/Tending/TendingCard";
 
-const Mostpopular = ({ products }: { products: Product[] }) => {
+const TendingProduct = ({ products }: { products: Product[] }) => {
   const popularProducts = products.filter((produst) => produst.likes >= 50);
   console.log(popularProducts);
   return (
     <div className="my-10">
-      <div className="flex justify-between my-6">
+      <div className="flex justify-between my-6 ">
         <div className="text-left">
           <h1 className="text-2xl font-bold">Trending Product</h1>
           <p>
@@ -23,13 +24,13 @@ const Mostpopular = ({ products }: { products: Product[] }) => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4 my-6">
-        {popularProducts.slice(0, 8).map((product) => (
-          <ProductCard key={product.brand} product={product} />
+      <div className="grid grid-cols-4 gap-4 my-6 p-10">
+        {popularProducts.slice(0, 6).map((product) => (
+          <TendingCard key={product.brand} product={product} />
         ))}
       </div>
     </div>
   );
 };
 
-export default Mostpopular;
+export default TendingProduct;

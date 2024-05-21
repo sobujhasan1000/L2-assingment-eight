@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@mui/material";
 import { Product } from "@/types";
 import BrandCard from "../shared/Ui/brandCard/BrandCard";
@@ -16,7 +17,7 @@ const TopCatagoris = ({ products }: { products: Product[] }) => {
           maiores asperiores porro quia quos <br />
           corporis explicabo, libero dolores voluptatem minus.
         </p>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-6 p-10">
           {topBrans.slice(0, 6).map((product) => (
             <BrandCard key={product.brand} product={product} />
           ))}

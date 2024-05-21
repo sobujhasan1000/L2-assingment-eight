@@ -1,29 +1,29 @@
-"use client";
-import { Product } from "@/types";
 import Image from "next/image";
+import { Product } from "@/types";
 import Link from "next/link";
 
-const AllLaptopCard = ({ product }: { product: Product | undefined }) => {
+const TendingCard = ({ product }: { product: Product | undefined }) => {
   if (!product) {
     return <div>Loading...</div>;
   }
+  // console.log(product);
   return (
-    <div className="card card-compact  bg-base-100 shadow-xl">
+    <div className="card  image-full  mx-auto h-60 w-full ">
       <figure>
         <Image
-          className="w-full h-64"
+          className=""
           src={product.imageLink}
           alt="Shoes"
+          width={400}
           height={200}
-          width={300}
         />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product.productName}</h2>
-        <p>{product.productDetails}</p>
+        <p></p>
         <div className="card-actions justify-end">
-          <Link href={`/products/${product._id}`}>
-            <button className="btn bg-cyan-300">view details</button>
+          <Link href="products">
+            <button className="btn bg-cyan-300">details</button>
           </Link>
         </div>
       </div>
@@ -31,4 +31,4 @@ const AllLaptopCard = ({ product }: { product: Product | undefined }) => {
   );
 };
 
-export default AllLaptopCard;
+export default TendingCard;

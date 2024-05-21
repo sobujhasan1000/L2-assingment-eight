@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <div className="navbar bg-teal-200">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">
+          Lap<span className="text-red-400">tops</span>
+        </a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -14,10 +16,10 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="categories">Categories</Link>
+            <Link href="categories">Bands</Link>
           </li>
           <li>
-            <Link href="products">Products</Link>
+            <Link href="products">Laptops</Link>
           </li>
           <li>
             <Link href="flash-sale">Flash sale</Link>

@@ -1,7 +1,7 @@
 import Carusol from "@/components/Banner/Carusol";
 import FlashSale from "@/components/FlashSale/flashSale";
-import Mostpopular from "@/components/MostPopular/Mostpopular";
-import TopCatagoris from "@/components/TopCatagories/TopCatagoris";
+import Mostpopular from "@/components/TendingProduct/TendingProducts";
+import TopCatagoris from "@/components/TopBands/TopBand";
 const Homepage = async () => {
   const res = await fetch("http://localhost:5000/products", {
     next: { revalidate: 30 },

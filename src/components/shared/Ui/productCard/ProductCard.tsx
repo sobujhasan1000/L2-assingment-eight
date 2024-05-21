@@ -6,18 +6,24 @@ const ProductCard = ({ product }: { product: Product | undefined }) => {
   if (!product) {
     return <div>Loading...</div>;
   }
-  console.log(product);
+  // console.log(product);
   return (
-    <div className="card  image-full  mx-auto ] ">
+    <div className="card  image-full  mx-auto h-60 w-full ">
       <figure>
-        <Image src={product.imageLink} alt="Shoes" width={400} height={200} />
+        <Image
+          className=""
+          src={product.imageLink}
+          alt="Shoes"
+          width={400}
+          height={200}
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product.productName}</h2>
         <p></p>
         <div className="card-actions justify-end">
           <Link href="flash-sale">
-            <button className="btn btn-primary">details</button>
+            <button className="btn bg-cyan-300">details</button>
           </Link>
         </div>
       </div>
