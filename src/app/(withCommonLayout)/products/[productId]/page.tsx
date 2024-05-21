@@ -7,10 +7,10 @@
 // }
 
 // const Detailspage = async ({ params }: laptopDetails) => {
-//   // console.log(params);
-//   // const res = await fetch(`http://localhost:5000/products/${params.productId}`);
-//   // const laptopDetails = await res.json();
-//   // console.log(laptopDetails);
+//   console.log(params);
+//   const res = await fetch(`http://localhost:5000/products/${params.productId}`);
+//   const laptopDetails = await res.json();
+//   console.log(laptopDetails);
 //   return (
 //     <div>
 //       <ProductDetail laptopDetails={laptopDetails} />
@@ -19,3 +19,13 @@
 // };
 
 // export default Detailspage;
+
+const page = () => {
+  return (
+    <div>
+      <h1>hello</h1>
+    </div>
+  );
+};
+
+export default page;
