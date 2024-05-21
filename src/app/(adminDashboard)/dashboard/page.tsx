@@ -1,9 +1,12 @@
-const page = () => {
+"use client";
+import Paichat from "@/components/shared/Ui/Paichat/Paichat";
+
+const Dashboardpage = () => {
   return (
     <div>
-      <h1>dashboard</h1>
+      <Paichat />
     </div>
   );
 };
 
-export default page;
+export default Dashboardpage;

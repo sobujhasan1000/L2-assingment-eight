@@ -50,7 +50,7 @@ const Productspage = async () => {
           </div>
         </div>
         <div className="col-span-4 bg-zinc-300">
-          <div className="grid grid-cols-3 gap-4 my-6">
+          <div className="grid grid-cols-3 gap-6 my-6 p-8">
             {allLaptops.map((product: Product) => (
               <AllLaptopCard key={product.brand} product={product} />
             ))}

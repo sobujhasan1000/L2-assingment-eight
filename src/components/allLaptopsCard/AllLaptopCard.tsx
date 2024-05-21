@@ -7,16 +7,22 @@ const AllLaptopCard = ({ product }: { product: Product | undefined }) => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact  bg-base-100 shadow-xl">
       <figure>
-        <Image src={product.imageLink} alt="Shoes" height={200} width={300} />
+        <Image
+          className="w-full h-64"
+          src={product.imageLink}
+          alt="Shoes"
+          height={200}
+          width={300}
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product.productName}</h2>
         <p>{product.productDetails}</p>
         <div className="card-actions justify-end">
           <Link href={`/products/${product._id}`}>
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-cyan-300">view details</button>
           </Link>
         </div>
       </div>
