@@ -1,3 +1,4 @@
+"use client";
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-green-200 bg-opacity-80 text-base-content rounded">

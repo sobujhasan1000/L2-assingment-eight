@@ -1,4 +1,4 @@
-import ProductCard from "@/components/shared/Ui/productCard/ProductCard";
+import BrandCard from "@/components/shared/Ui/brandCard/BrandCard";
 import { Product } from "@/types";
 
 const page = async () => {
@@ -8,7 +8,7 @@ const page = async () => {
     <div>
       <div className="grid grid-cols-4 gap-4 my-6">
         {products.slice(0, 8).map((product: Product) => (
-          <ProductCard key={product.brand} product={product} />
+          <BrandCard key={product.brand} product={product} />
         ))}
       </div>
     </div>

@@ -3,6 +3,9 @@ import { PieChart } from "@mui/x-charts";
 const Paichat = () => {
   return (
     <div>
+      <h1 className="p-4 text-xl text-center mb-5 font-bold">
+        well come to dashboard
+      </h1>
       <PieChart
         series={[
           {
