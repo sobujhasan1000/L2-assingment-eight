@@ -14,7 +14,7 @@ export const generateStaticParams = async () => {
       throw new Error(`Failed to fetch laptops: ${res.statusText}`);
     }
     const products = await res.json();
-    return products.slice(0, 3).map((product: Product) => ({
+    return products.slice(0, 5).map((product: Product) => ({
       productId: product._id,
     }));
   } catch (error) {
