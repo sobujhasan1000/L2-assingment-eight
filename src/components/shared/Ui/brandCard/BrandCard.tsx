@@ -22,7 +22,7 @@ const BrandCard = ({ product }: { product: Product | undefined }) => {
         <h2 className="card-title">{product.brand}</h2>
         <p>{product.rating}</p>
         <div className="card-actions justify-end">
-          <Link href="/brands">
+          <Link href="/categories">
             <button className="btn bg-cyan-300">details</button>
           </Link>
         </div>
