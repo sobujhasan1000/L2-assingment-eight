@@ -27,7 +27,7 @@ const CommonLayOut = ({ children }: { children: React.ReactNode }) => {
             <Link href="/">home</Link>
           </li>
           <li>
-            <Link href="dashboard/allproduct">all product</Link>
+            <Link href="/dashboard/allproduct">all product</Link>
           </li>
         </ul>
       </div>
