@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner/Banner";
 import Carusol from "@/components/Banner/Carusol";
 import FlashSale from "@/components/FlashSale/flashSale";
 import Mostpopular from "@/components/TendingProduct/TendingProducts";
@@ -10,7 +11,8 @@ const Homepage = async () => {
   // console.log(products);
   return (
     <div>
-      <Carusol />
+      <Banner />
+      <Carusol products={products} />
       <FlashSale products={products} />
       <TopCatagoris products={products} />
       <Mostpopular products={products} />
