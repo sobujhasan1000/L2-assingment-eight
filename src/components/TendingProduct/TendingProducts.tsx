@@ -19,7 +19,7 @@ const TendingProduct = ({ products }: { products: Product[] }) => {
           </p>
         </div>
         <div>
-          <Link href="products">
+          <Link href="/laptops">
             <Button>view All</Button>
           </Link>
         </div>

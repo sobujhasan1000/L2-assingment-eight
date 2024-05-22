@@ -23,7 +23,7 @@ const TendingCard = ({ product }: { product: Product | undefined }) => {
         <h2 className="card-title">{product.productName}</h2>
         <p></p>
         <div className="card-actions justify-end">
-          <Link href="products">
+          <Link href="/laptops">
             <button className="btn bg-cyan-300">details</button>
           </Link>
         </div>

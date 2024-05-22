@@ -22,7 +22,7 @@ const AllLaptopCard = ({ product }: { product: Product | undefined }) => {
         <h2 className="card-title">{product.productName}</h2>
         <p>{product.productDetails}</p>
         <div className="card-actions justify-end">
-          <Link href={`/products/${product._id}`}>
+          <Link href={`/laptops/${product._id}`}>
             <button className="btn bg-cyan-300">view details</button>
           </Link>
         </div>

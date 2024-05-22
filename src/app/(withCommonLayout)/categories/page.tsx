@@ -2,7 +2,7 @@ import BrandCard from "@/components/shared/Ui/brandCard/BrandCard";
 import { Product } from "@/types";
 
 const page = async () => {
-  const res = await fetch(`${process.env.API_URL}/products`, {
+  const res = await fetch(`${process.env.API_URL}/laptops`, {
     next: { revalidate: 30 },
   });
   const products = await res.json();

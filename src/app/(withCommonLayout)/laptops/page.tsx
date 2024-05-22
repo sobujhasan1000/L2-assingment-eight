@@ -2,7 +2,7 @@ import AllLaptopCard from "@/components/allLaptopsCard/AllLaptopCard";
 import { Product } from "@/types";
 
 const Productspage = async () => {
-  const res = await fetch(`${process.env.API_URL}/products`, {
+  const res = await fetch(`${process.env.API_URL}/laptops`, {
     next: { revalidate: 30 },
   });
   const allLaptops = await res.json();

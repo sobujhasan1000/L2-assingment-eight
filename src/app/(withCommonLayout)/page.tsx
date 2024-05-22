@@ -4,7 +4,7 @@ import FlashSale from "@/components/FlashSale/flashSale";
 import Mostpopular from "@/components/TendingProduct/TendingProducts";
 import TopCatagoris from "@/components/TopBands/TopBand";
 const Homepage = async () => {
-  const res = await fetch(`${process.env.API_URL}/products`, {
+  const res = await fetch(`${process.env.API_URL}/laptops`, {
     next: { revalidate: 30 },
   });
   const products = await res.json();

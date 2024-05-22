@@ -19,7 +19,7 @@ export const generateStaticParams = async () => {
 const Detailspage = async ({ params }: details) => {
   const { productId } = params;
   // console.log(params);
-  const res = await fetch(`${process.env.API_URL}/products/${productId}`, {
+  const res = await fetch(`${process.env.API_URL}/laptops/${productId}`, {
     cache: "no-store",
   });
   const details = await res.json();

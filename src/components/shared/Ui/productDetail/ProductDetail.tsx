@@ -13,7 +13,10 @@ const Detailpage = ({ details }: { details: Product | undefined }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{details.productName}</h2>
-        <p>Click the button to listen on Spotiwhy app.</p>
+        <p>{details.brand}</p>
+        <p>{details.productTitle}</p>
+        <p>{details.price}</p>
+        <p>{details.productDetails}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Listen</button>
         </div>
