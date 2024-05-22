@@ -25,7 +25,7 @@ const TendingProduct = ({ products }: { products: Product[] }) => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-4 my-6 p-10">
-        {popularProducts.slice(0, 6).map((product) => (
+        {popularProducts.slice(0, 4).map((product) => (
           <TendingCard key={product.brand} product={product} />
         ))}
       </div>
