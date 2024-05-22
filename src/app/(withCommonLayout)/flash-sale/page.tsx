@@ -1,3 +1,4 @@
+import FlashSale from "@/components/FlashSale/flashSale";
 import ProductCard from "@/components/shared/Ui/productCard/ProductCard";
 import { Product } from "@/types";
 
