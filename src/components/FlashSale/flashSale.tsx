@@ -5,9 +5,9 @@ import { Product } from "./../../types/index";
 import Link from "next/link";
 
 const FlashSale = ({ products }: { products: Product[] }) => {
-  if (!products) {
-    return null;
-  }
+  // if (!products) {
+  //   return null;
+  // }
   const flashSaleProducts = products.filter(
     (product) => product.flashSale === true
   );
