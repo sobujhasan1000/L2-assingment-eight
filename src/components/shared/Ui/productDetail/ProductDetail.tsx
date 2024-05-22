@@ -1,27 +1,18 @@
+"use client";
 import { Product } from "@/types";
 import Image from "next/image";
 
-const ProductDetail = ({
-  laptopDetails,
-}: {
-  laptopDetails: Product | undefined;
-}) => {
-  console.log(laptopDetails);
-  if (!laptopDetails) {
+const Detailpage = ({ details }: { details: Product | undefined }) => {
+  if (!details) {
     return <div>Loading...</div>;
   }
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure>
-        <Image
-          src={laptopDetails.imageLink}
-          alt="Album"
-          width={400}
-          height={400}
-        />
+        <Image src={details.imageLink} alt="Album" width={400} height={400} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{laptopDetails.productName}</h2>
+        <h2 className="card-title">{details.productName}</h2>
         <p>Click the button to listen on Spotiwhy app.</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Listen</button>
@@ -31,4 +22,4 @@ const ProductDetail = ({
   );
 };
 
-export default ProductDetail;
+export default Detailpage;

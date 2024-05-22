@@ -14,7 +14,7 @@ const FlashSale = ({ products }: { products: Product[] }) => {
 
   return (
     <div className="my-10">
-      <div className="flex justify-between">
+      <div className="flex justify-between mx-8">
         <h1 className="text-2xl font-bold">Flash Sale</h1>
         <Link href="flash-sale">
           <Button>See All</Button>

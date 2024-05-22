@@ -2,13 +2,14 @@
 import { Button } from "@mui/material";
 import { Product } from "@/types";
 import BrandCard from "../shared/Ui/brandCard/BrandCard";
+import Link from "next/link";
 
 const TopCatagoris = ({ products }: { products: Product[] }) => {
   const topBrans = products.filter((bands) => bands.rating >= 4);
   // console.log(topbrans);
   return (
     <div>
-      <div className="my-6">
+      <div className="mt-4">
         <h1 className="text-center text-2xl font-bold">
           Now Top Brand Products
         </h1>
@@ -23,7 +24,11 @@ const TopCatagoris = ({ products }: { products: Product[] }) => {
           ))}
         </div>
       </div>
-      <Button className="my-4">View All</Button>
+      <div className="flex items-center justify-center">
+        <Link href="/categories">
+          <Button className=" flex  justify-items-center">View All</Button>
+        </Link>
+      </div>
     </div>
   );
 };
