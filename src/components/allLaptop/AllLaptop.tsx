@@ -2,17 +2,33 @@
 import { Product } from "@/types";
 import React, { useState } from "react";
 import AllLaptopCard from "../allLaptopsCard/AllLaptopCard";
+const areArraysEqual = (array1: number[] | null, array2: number[] | null) => {
+  if (!array1 || !array2) return false;
+  if (array1.length !== array2.length) return false;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) return false;
+  }
+  return true;
+};
 
 const AllLaptop = ({ products }: { products: Product[] }) => {
   console.log(products);
 
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
+  const [selectedPriceRange, setSelectedPriceRange] = useState<
+    [number, number] | null
+  >(null);
 
-  const filteredProducts = selectedBrand
-    ? products.filter(
-        (product) => product.brand.toLowerCase() === selectedBrand.toLowerCase()
-      )
-    : products;
+  const filteredProducts = products.filter((product) => {
+    const brandMatches = selectedBrand
+      ? product.brand.toLowerCase() === selectedBrand.toLowerCase()
+      : true;
+    const priceMatches = selectedPriceRange
+      ? product.price >= selectedPriceRange[0] &&
+        product.price <= selectedPriceRange[1]
+      : true;
+    return brandMatches && priceMatches;
+  });
 
   return (
     <div>
@@ -22,14 +38,44 @@ const AllLaptop = ({ products }: { products: Product[] }) => {
             <div>
               <h1 className="text-xl py-4">price Range</h1>
               <div className="grid  gap-4 mx-10">
-                <button className="bg-green-200 px-6 rounded-md">5k-10k</button>
-                <button className="bg-green-200 px-6 rounded-md">
+                <button
+                  className={`bg-green-200 px-6 rounded-md ${
+                    areArraysEqual(selectedPriceRange, [5000, 10000])
+                      ? "bg-green-500"
+                      : ""
+                  }`}
+                  onClick={() => setSelectedPriceRange([5000, 10000])}
+                >
+                  5k-10k
+                </button>
+                <button
+                  className={`bg-green-200 px-6 rounded-md ${
+                    areArraysEqual(selectedPriceRange, [10000, 15000])
+                      ? "bg-green-500"
+                      : ""
+                  }`}
+                  onClick={() => setSelectedPriceRange([10000, 15000])}
+                >
                   10k-15k
                 </button>
-                <button className="bg-green-200 px-6 rounded-md">
+                <button
+                  className={`bg-green-200 px-6 rounded-md ${
+                    areArraysEqual(selectedPriceRange, [15000, 20000])
+                      ? "bg-green-500"
+                      : ""
+                  }`}
+                  onClick={() => setSelectedPriceRange([15000, 20000])}
+                >
                   15k-20k
                 </button>
-                <button className="bg-green-200 px-6 rounded-md">
+                <button
+                  className={`bg-green-200 px-6 rounded-md ${
+                    areArraysEqual(selectedPriceRange, [20000, 100000])
+                      ? "bg-green-500"
+                      : ""
+                  }`}
+                  onClick={() => setSelectedPriceRange([20000, 100000])}
+                >
                   20k-100k
                 </button>
               </div>
@@ -77,7 +123,7 @@ const AllLaptop = ({ products }: { products: Product[] }) => {
                 </button>
               </div>
             </div>
-            <div>
+            {/* <div>
               <h1 className="text-xl py-4">Rating</h1>
               <div className="grid  gap-4 mx-10">
                 <button className="bg-green-200 px-6 rounded-md">1 Star</button>
@@ -86,15 +132,21 @@ const AllLaptop = ({ products }: { products: Product[] }) => {
                 <button className="bg-green-200 px-6 rounded-md">4 Star</button>
                 <button className="bg-green-200 px-6 rounded-md">5 Star</button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-span-4 bg-zinc-300">
-          <div className="grid grid-cols-3 gap-6 my-6 p-8">
-            {filteredProducts.map((product: Product) => (
-              <AllLaptopCard key={product.brand} product={product} />
-            ))}
-          </div>
+          {filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-3 gap-6 my-6 p-8">
+              {filteredProducts.map((product: Product) => (
+                <AllLaptopCard key={product._id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <h2 className="text-xl font-bold">No products found</h2>
+            </div>
+          )}
         </div>
       </div>
     </div>
