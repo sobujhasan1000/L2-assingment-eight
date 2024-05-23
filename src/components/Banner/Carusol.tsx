@@ -42,7 +42,7 @@ const Carusol = ({ products }: { products: Product[] }) => {
               alt={product.productName}
               height={300}
               width={200}
-              className="h-full w-80 mx-auto"
+              className="h-full w-80 mx-auto rounded-md"
             />
           </div>
         ))}

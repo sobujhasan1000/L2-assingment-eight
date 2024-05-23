@@ -20,8 +20,10 @@ const ProductCard = ({ product }: { product: Product | undefined }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{product.productName}</h2>
-        <p></p>
+        <h2 className="card-title text-emerald-400">{product.productName}</h2>
+        <p className="text-emerald-500 font-extrabold">
+          {product.discount} % off
+        </p>
         <div className="card-actions justify-end">
           <Link href="flash-sale">
             <button className="btn bg-cyan-300">details</button>
