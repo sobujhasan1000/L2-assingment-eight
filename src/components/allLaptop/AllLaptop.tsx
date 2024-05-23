@@ -2,13 +2,12 @@
 import { Product } from "@/types";
 import React, { useState } from "react";
 import AllLaptopCard from "../allLaptopsCard/AllLaptopCard";
-const areArraysEqual = (array1: number[] | null, array2: number[] | null) => {
+const areArraysEqual = (
+  array1: [number, number] | null,
+  array2: [number, number] | null
+) => {
   if (!array1 || !array2) return false;
-  if (array1.length !== array2.length) return false;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) return false;
-  }
-  return true;
+  return array1[0] === array2[0] && array1[1] === array2[1];
 };
 
 const AllLaptop = ({ products }: { products: Product[] }) => {
